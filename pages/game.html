@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="description" content="Provides information on global warming awareness">
+  <meta name="keywords" content="Earth, Global warming">
+  <meta name="author" content="Daniel">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../W3.CSS%20Template_files/w3-theme-black.css">
+  <link rel="stylesheet" href="../W3.CSS%20Template_files/font-awesome.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/w3.css">
+  <title>Save the environment - Game </title>
+</head>
+
+<body>
+
+
+
+  <nav tabindex="0" class="w3-container w3-theme w3-padding" role="navigation" aria-label="main navigation">
+
+    <ul role="navigation" class="center">
+      <a class="w3-button w3-block w3-black" href="#main">Navigation below Skip to main content</a>
+      <li>
+        <a class="w3-button w3-block w3-black" href="../index.html">Home</a>
+      </li>
+      <li><a role="navigation item" class="w3-button w3-block w3-black" href="game.html">Game</a></li>
+      <li><a class="w3-button w3-block w3-black" href="contact.html">Contact</a></li>
+      <li><a class="w3-button w3-block w3-black" href="photo.html">Photos</a></li>
+      <li><a class="w3-button w3-block w3-black" href="video.html">Videos</a></li>
+      <li><a class="w3-button w3-block w3-black" href="audio.html">Audio</a></li>
+      <li><a class="w3-button w3-block w3-black" href="about.html">About</a></li>
+      <li><a class="w3-button w3-block w3-black" href="transcript.html">Transcript</a></li>
+    </ul>
+
+  </nav>
+  <header>
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+    </header>
+
+
+    <main id="main" role="main" tabindex="0" aria-label="main section" class="w3-row-padding w3-center w3-margin-top">
+      <h1 tabindex="0" class="w3-container w3-blue-grey" role="heading">Play a game and help the planet</h1>
+      <div class="w3-container">
+        <hr>
+        <div class="w3-center">
+          <h2 class="ex" id="identifying-a-table-using-a-caption" tabindex="0"> Playing a game to help the
+            planet</h2>
+
+          <p tabindex="0">There are many things one can do to help the planet, and everything counts. Here is a game
+            that
+            will inspire
+            good actions</p>
+          <figure>
+            <figcaption>
+              <strong tabindex="0" id="game-caption">Treating the planet well </span>
+            </figcaption>
+            <table class="w3-table w3-striped w3-bordered" aria-labelledby="game-caption">
+
+              <tr>
+                <th tabindex="0">Objective</th>
+                <th tabindex="0">Points</th>
+              </tr>
+              <tr>
+                <td tabindex="0">Collect bottles in nature</td>
+                <td tabindex="0">1 point per bottle</td>
+              </tr>
+              <tr>
+                <td tabindex="0">Collect bags of thrash in nature</td>
+                <td tabindex="0">10 points per bag</td>
+              </tr>
+              <tr>
+                <td tabindex="0">Donate old electronics </td>
+                <td tabindex="0">20 points per item</td>
+              </tr>
+            </table>
+        </div>
+        </table>
+        </figure>
+      </div>
+      <!-- Footer -->
+      <footer class="w3-container w3-theme-dark w3-padding-16">
+        <h3>Footer</h3>
+
+      </footer>
+
+      <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+      <script>
+        // Side navigation
+        function w3_open() {
+          var x = document.getElementById("mySidebar");
+          x.style.width = "100%";
+          x.style.fontSize = "40px";
+          x.style.paddingTop = "10%";
+          x.style.display = "block";
+        }
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Tabs
+        function openCity(evt, cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          var activebtn = document.getElementsByClassName("testbtn");
+          for (i = 0; i < x.length; i++) {
+            activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " w3-dark-grey";
+        }
+
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+
+        // Slideshows
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+          slideIndex = slideIndex + n;
+          showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = x.length };
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+          var elem = document.getElementById("myBar");
+          var width = 5;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width == 100) {
+              clearInterval(id);
+            } else {
+              width++;
+              elem.style.width = width + '%';
+              elem.innerHTML = width * 1 + '%';
+            }
+          }
+        }
+      </script>
+
+
+</body>
+
+</html>
